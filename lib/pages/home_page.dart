@@ -61,7 +61,7 @@ class HomePage extends StatelessWidget {
               //snapshot.data?.forEach((p) => print(p.title));
               if (snapshot.hasData) {
                 return MovieHorizontal(
-                  peliculas: snapshot.data,
+                  peliculas: snapshot.data, siguientePagina: peliculasProvider.getPopulares,
                 );
               } else {
                 return Center(child: CircularProgressIndicator());
